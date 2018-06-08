@@ -2,7 +2,7 @@
 
 R Shiny Workshop materials from [Research Computing Services](http://www.it.northwestern.edu/research/).  
 
-* Workshop materials still in development. *
+*Workshop materials still in development.*
 
 # Software and Files
 
