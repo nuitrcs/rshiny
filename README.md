@@ -1,8 +1,3 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 # R Shiny Workshop
 
 R Shiny Workshop materials from [Research Computing Services](http://www.it.northwestern.edu/research/).  
