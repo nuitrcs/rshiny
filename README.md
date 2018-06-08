@@ -2,6 +2,8 @@
 
 R Shiny Workshop materials from [Research Computing Services](http://www.it.northwestern.edu/research/).  
 
+* Workshop materials still in development. *
+
 # Software and Files
 
 ## Option 1: On your laptop
@@ -27,7 +29,7 @@ To make sure everything is working, in RStudio, go to File :arrow_right: New Fil
 
 ### Workshop Materials
 
-Workshop files can be downloaded from https://github.com/nuitrcs/rshiny.  Click on the green Clone or Download button, then download the repository as a ZIP file.  
+To download workshop materials, click on the green Clone or Download button, then download the repository as a ZIP file.  
 
 ![github download](images/githubdownload.png)
 
