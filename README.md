@@ -6,7 +6,7 @@ R Shiny Workshop materials from [Research Computing Services](http://www.it.nort
 
 # Software and Files
 
-## Option 1: On your laptop
+## Option 1: On your laptop 
 
 ### R and RStudio
 
@@ -29,7 +29,7 @@ To make sure everything is working, in RStudio, go to File :arrow_right: New Fil
 
 ### Workshop Materials
 
-To download workshop materials, click on the green Clone or Download button, then download the repository as a ZIP file.  
+To download workshop materials (which will be available about 1 week before the event), click on the green Clone or Download button, then download the repository as a ZIP file.  
 
 ![github download](images/githubdownload.png)
 
@@ -37,15 +37,17 @@ Find the downloaded .zip file on your computer, likely in your Downloads folder.
 
 Double click on the .Rproj folder in the folder to launch the project in RStudio.  Alternatively, open RStudio, then go to File :arrow_right: Open Project and find the .Rproj file in the rshiny directory to open.
 
+Alternatively, if you're familiar with git, you can create a new RStudio project directly from this repository.
+
 
 ## Option 2: RStudio Cloud
 
-[RStudio Cloud](https://rstudio.cloud) is a way to run RStudio in your web browser.  A project with all of the R files for the workshop is available at ...  
+[RStudio Cloud](https://rstudio.cloud) is a way to run RStudio in your web browser.  A project with all of the R files for the workshop and necessary packages will be available to clone.  For now, just set up an account. 
 
 
 # Deploying Shiny Apps
 
-One option for deploying Shiny applications to share with others is http://shinyapps.io.  This is a service of RStudio, and there is a free account option.  This workshop includes information on deploying your application to this service.  
+One option for deploying Shiny applications to share with others is http://shinyapps.io.  This is a service of RStudio, and there is a free account option.  This workshop includes information on deploying your application to this service; this is an optional step.  
 
 # Resources
 
@@ -53,15 +55,17 @@ See the [R Workshops Guide](https://github.com/nuitrcs/rworkshops) for links to 
 
 ## Shiny Resources
 
-[Shiny Documentation](https://shiny.rstudio.com)
+[Shiny Documentation](https://shiny.rstudio.com): reference, articles, tutorials, gallery, etc.  Start here.
 
 [Shiny Cheat Sheet](https://github.com/rstudio/cheatsheets/raw/master/shiny.pdf)
 
-[Shiny Examples](https://github.com/rstudio/shiny-examples)
+[Shiny Examples](https://github.com/rstudio/shiny-examples): code for all of the examples in the official documentation and more
 
 [Shiny Essentials Workshop Materials](https://github.com/rstudio-education/shiny-sdss18) from Mine Çetinkaya-Rundel
 
 [Shiny and RMarkdown Workshop Materials](https://github.com/rstudio-education/intro-shiny-rmarkdown) from Mine Çetinkaya-Rundel
+
+[Webinars from RStudio](https://www.rstudio.com/resources/webinars/): look for the Shiny and Advanced Shiny sections
 
 # Acknowledgements
 
