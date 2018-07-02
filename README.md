@@ -37,12 +37,31 @@ Find the downloaded .zip file on your computer, likely in your Downloads folder.
 
 Double click on the .Rproj folder in the folder to launch the project in RStudio.  Alternatively, open RStudio, then go to File :arrow_right: Open Project and find the .Rproj file in the rshiny directory to open.
 
-Alternatively, if you're familiar with git, you can create a new RStudio project directly from this repository.
+Alternatively, if you're familiar with git, you can create a new RStudio project directly from this repository (again, once the materials are posted).
 
 
 ## Option 2: RStudio Cloud
 
-[RStudio Cloud](https://rstudio.cloud) is a way to run RStudio in your web browser.  A project with all of the R files for the workshop and necessary packages will be available to clone.  For now, just set up an account. 
+[RStudio Cloud](https://rstudio.cloud) is a way to run RStudio in your web browser.  Set up an account.  In Your Workspace, create a New Project, selecting New Project from a Git Repository.  Provide the address of this repository: https://github.com/nuitrcs/rshiny.  This will copy all of the files from this repository into your new project.  
+
+*You should wait until 2-3 days before the workshop to do this, to ensure you have the most current version of the workshop files.**
+
+You will also need to install packages in this project space:
+
+* tidyverse
+* shiny
+* rmarkdown
+* DT
+* shinythemes
+
+Install these with the R command
+
+```r
+install.packages(c("tidyverse", "shiny", "rmarkdown", "DT", "shinythemes"), 
+                 repos="http://cran.rstudio.com")
+```
+
+or use the buttons in the Packages window in the bottom right of RStudio to install them.
 
 
 # Deploying Shiny Apps
