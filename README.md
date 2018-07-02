@@ -54,7 +54,7 @@ You will also need to install packages in this project space:
 * DT
 * shinythemes
 
-Install these with the R command
+With the project open (opening the project will open RStudio in your web browser), install these with the R command
 
 ```r
 install.packages(c("tidyverse", "shiny", "rmarkdown", "DT", "shinythemes"), 
