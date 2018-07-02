@@ -29,7 +29,7 @@ To make sure everything is working, in RStudio, go to File :arrow_right: New Fil
 
 ### Workshop Materials
 
-To download workshop materials (which will be available about 1 week before the event), click on the green Clone or Download button, then download the repository as a ZIP file.  
+To download workshop materials (final versions will be available 2-3 days before the event), click on the green Clone or Download button, then download the repository as a ZIP file.  
 
 ![github download](images/githubdownload.png)
 
