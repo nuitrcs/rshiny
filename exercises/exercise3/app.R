@@ -1,4 +1,23 @@
-# EXERCISE 3
+# EXERCISE 3A
+
+# Run the application.
+# Laptop users: Copy the URL from upper left and open two web browser tabs or windows with this URL.
+# Cloud users: Find a partner who is running from their laptop. 
+# Hint: sample() chooses a random sample from a supplied vector.
+# 
+# - Which values should be the same in the two sessions?  Why?
+# - Which values should change during a session?  Why?
+# - Should any of the values be the same as your neighbors?
+# - What happens if you refresh the page/tab?
+# - What happens if you delete the number from the number input field? Or enter text? Or a negative number?
+
+
+# EXERCISE 3B
+
+# Add req() and/or validate() statements to verify the numeric input for output$letters
+# Change the code so that the letter that is displayed is chosen randomly for the session, not each time the input changes.
+# Run the app again and see how the behavior changes from before
+
 
 library(shiny)
 

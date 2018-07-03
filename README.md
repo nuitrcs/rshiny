@@ -2,9 +2,12 @@
 
 R Shiny Workshop materials from [Research Computing Services](http://www.it.northwestern.edu/research/).  
 
-*Workshop materials still in development.*
 
 # Software and Files
+
+For this workshop, you'll need to install some R packages and download the workshop files from this repository.
+
+Keynote and Powerpoint versions of the slides will be included when you download the repository (below).  If you don't have either of these programs, try opening the slides with [Google Slides](https://docs.google.com/presentation/u/0/) or [PowerPoint Online](https://support.office.com/en-us/article/view-a-presentation-without-powerpoint-2f1077ab-9a4e-41ba-9f75-d55bd9b231a6).
 
 ## Option 1: On your laptop 
 

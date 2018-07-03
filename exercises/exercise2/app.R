@@ -2,6 +2,13 @@
 # Fix the code below so that the app runs and works
 # Hint: there are 4 errors
 
+# EXERCISE 2B
+# Fill in the code to render a DataTable of the entire data set.
+# What is the name of the element on output you need to set? output$_____ 
+# Using the cheat sheet, what is the render function for a DataTable that goes with dataTableOutput?
+# The only expression you need for the render function is the name of the data object.   
+# Hint: what did we call the dataset (data frame object) when importing it at the top of the file?
+
 library(shiny)
 library(readr)
 library(ggplot2)
