@@ -1,6 +1,6 @@
 # R Shiny Workshop
 
-R Shiny Workshop materials from [Research Computing Services](http://www.it.northwestern.edu/research/).  
+R Shiny Workshop materials by Christina Maimone from [Northwestern Research Computing Services](http://www.it.northwestern.edu/research/).  
 
 
 # Software and Files
