@@ -19,9 +19,10 @@ You'll also need the following packages and their dependencies installed and up 
 * rmarkdown
 * DT
 * shinythemes
+* rsconnect (for deploying to shinyapps.io)
 
 ```r
-install.packages(c("tidyverse", "shiny", "rmarkdown", "DT", "shinythemes"), 
+install.packages(c("tidyverse", "shiny", "rmarkdown", "DT", "shinythemes", "rsconnect"), 
                  repos="http://cran.rstudio.com")
 ```
 
@@ -53,11 +54,12 @@ You will also need to install packages in this project space:
 * rmarkdown
 * DT
 * shinythemes
+* rsconnect (for deploying to shinyapps.io)
 
 With the project open (opening the project will open RStudio in your web browser), install these with the R command
 
 ```r
-install.packages(c("tidyverse", "shiny", "rmarkdown", "DT", "shinythemes"), 
+install.packages(c("tidyverse", "shiny", "rmarkdown", "DT", "shinythemes", "rsconnect"), 
                  repos="http://cran.rstudio.com")
 ```
 
