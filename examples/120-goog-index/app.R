@@ -12,20 +12,20 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                 titlePanel("Google Trend Index"),
                 sidebarLayout(
                   sidebarPanel(
-
+                    
                     # Select variable type of trend to plot
                     selectInput(inputId = "type", label = strong("Trend index"),
                                 choices = c("Advertising & marketing" = "advert", "Education" = "educat",
                                             "Small business" = "smallbiz", "Travel" = "travel", "Unemployment" = "unempl"),
                                 selected = "travel"),
-
+                    
                     # Select date range to be plotted
                     dateRangeInput("date", strong("Date range"), start = "2007-01-01", end = "2017-07-31",
                                    min = "2007-01-01", max = "2017-07-31"),
-
+                    
                     # Select whether to overlay smooth trend line
                     checkboxInput(inputId = "smoother", label = strong("Overlay smooth trend line"), value = FALSE),
-
+                    
                     # Display only if the smoother is checked
                     conditionalPanel(condition = "input.smoother == true",
                                      sliderInput(inputId = "f", label = "Smoother span:",
@@ -34,7 +34,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
                                      HTML("Higher values give more smoothness.")
                     )
                   ),
-
+                  
                   # Output: Description, lineplot, and reference
                   mainPanel(
                     plotOutput(outputId = "lineplot", height = "300px"),
@@ -46,7 +46,7 @@ ui <- fluidPage(theme = shinytheme("lumen"),
 
 # Define server function
 server <- function(input, output) {
-
+  
   # Subset data
   selected_trends <- reactive({
     req(input$date)
@@ -58,8 +58,8 @@ server <- function(input, output) {
         date > as.POSIXct(input$date[1]) & date < as.POSIXct(input$date[2]
         ))
   })
-
-
+  
+  
   # Create scatterplot object the plotOutput function is expecting
   output$lineplot <- renderPlot({
     color = "#434343"
@@ -72,7 +72,7 @@ server <- function(input, output) {
       lines(smooth_curve, col = "#E6553A", lwd = 3)
     }
   })
-
+  
   # Pull in description of trend
   output$desc <- renderText({
     trend_text <- filter(trend_description, type == input$type) %>% pull(text)

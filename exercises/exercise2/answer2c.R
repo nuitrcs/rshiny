@@ -40,7 +40,7 @@ server <- function(input, output) {
   })
   
   output$datatable1 <- DT::renderDataTable({
-    req(input$plot1_brush)
+    #req(input$plot1_brush) # to have data table only show if a region is highlighted
     brushedPoints(data, input$plot1_brush, xvar="area", yvar=input$yval) 
   })
 }
