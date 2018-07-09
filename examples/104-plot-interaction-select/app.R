@@ -10,11 +10,8 @@ ui <- fluidPage(
   fluidRow(
     column(width = 4,
       plotOutput("plot1", height = 300,
-        # Equivalent to: click = clickOpts(id = "plot_click")
         click = "plot1_click",
-        brush = brushOpts(
-          id = "plot1_brush"
-        )
+        brush = "plot1_brush"
       )
     )
   ),
@@ -36,13 +33,14 @@ server <- function(input, output) {
   })
 
   output$click_info <- renderPrint({
-    # Because it's a ggplot2, we don't need to supply xvar or yvar; if this
-    # were a base graphics plot, we'd need those.
-    nearPoints(mtcars2, input$plot1_click, addDist = TRUE)
+    # Because it's a ggplot2, we don't need to supply xvar or yvar, but we can
+    nearPoints(mtcars2, input$plot1_click, addDist = TRUE,
+               xvar="wt", yvar="mpg")
   })
 
   output$brush_info <- renderPrint({
-    brushedPoints(mtcars2, input$plot1_brush)
+    brushedPoints(mtcars2, input$plot1_brush,
+                  xvar="wt", yvar="mpg")
   })
 }
 

@@ -50,7 +50,7 @@ Create a new Shiny app, as you did in Exercise 1A (or work from the previous fil
 To the `sidebarPanel`, add a `radioButtons` input with 
 
 * `inputId="color"`
-* `label="Color"`
+* `label="Bar Color"`
 * `choices=c("red","blue","green")`
 
 Run the app to make sure there aren't an errors.  The radio input won't have an effect yet though.
@@ -87,7 +87,7 @@ Hints:
 
 ## Exercise 2C
 
-Working from exercises/exercise2/app.R or answer2b.R, set the `brush` argument to `plotOutput="plot1_brush"`.  Change `DT::renderDataTable` to use output from `brushedPoints` instead.
+Working from exercises/exercise2/app.R or answer2b.R, set the `brush` argument to `plotOutput` to "plot1_brush": `brush="plot1_brush"`.  Change `DT::renderDataTable()` to use output from `brushedPoints()` instead of using `data` directly.
 
 **Answer**: exercises/exercise2/answer2c.R
 
@@ -113,11 +113,11 @@ Working from exercises/exercise2/app.R or answer2c.R:
 
 Working from exercises/exercise2/app.R or answer2c.R:
 
-* Add a horizontal rule `hr()` above the DataTable.
+* Add a horizontal rule `hr()` between the `mainPanel` and `verticalLayout`.
 * Add a link to the source of the data: 
     * African Development Bank Statistical Data Portal
     * http://dataportal.opendataforafrica.org
-    * Hint: There's a caption tag (`tags$caption`).  You'll also need an `a` tag for a link.
+    * Hint: There's a caption tag (`tags$caption()`).  You'll also need an `a()` tag for a link.
 
 **Answer**: exercises/exercise2/answer2e.R
 
@@ -127,9 +127,13 @@ Working from exercises/exercise2/app.R or answer2c.R:
 Working from exercises/exercise2/exercise2f.R:
 
 * Put a `tabsetPanel` inside the `mainPanel` with 2 tabs:
-* "All" tab: Existing plot
-* "By Region" tab: New plot with ID "regionplot" (there's code already in server section to actually make the plot)
+* "All" `tabPanel`: Existing `plotOutput()`
+* "By Region" `tabPanel`: New `plotOutput()` with `outputId="regionplot"` (there's code already in the server section to actually make the plot `output$regionplot`)
 
 Refer to documentation as needed.
 
 **Answer**: exercises/exercise2/answer2f.R
+
+## Exercise 2G
+
+Apply a theme from `shinythemes` to any working app.  Or use `shinythemes::themeSelector()` to see the themes applied to the app in real time.

@@ -24,7 +24,7 @@ ui <- fluidPage(
                      max = 50,
                      value = 30),
          radioButtons(inputId="color", 
-                      label="Color",
+                      label="Bar Color",
                       choices=c("red","blue","green"))
       ),
       

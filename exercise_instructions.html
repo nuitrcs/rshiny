@@ -172,7 +172,7 @@ $(document).ready(function () {
 <p>To the <code>sidebarPanel</code>, add a <code>radioButtons</code> input with</p>
 <ul>
 <li><code>inputId=&quot;color&quot;</code></li>
-<li><code>label=&quot;Color&quot;</code></li>
+<li><code>label=&quot;Bar Color&quot;</code></li>
 <li><code>choices=c(&quot;red&quot;,&quot;blue&quot;,&quot;green&quot;)</code></li>
 </ul>
 <p>Run the app to make sure there aren’t an errors. The radio input won’t have an effect yet though.</p>
@@ -202,7 +202,7 @@ $(document).ready(function () {
 </div>
 <div id="exercise-2c" class="section level2">
 <h2>Exercise 2C</h2>
-<p>Working from exercises/exercise2/app.R or answer2b.R, set the <code>brush</code> argument to <code>plotOutput=&quot;plot1_brush&quot;</code>. Change <code>DT::renderDataTable</code> to use output from <code>brushedPoints</code> instead.</p>
+<p>Working from exercises/exercise2/app.R or answer2b.R, set the <code>brush</code> argument to <code>plotOutput</code> to “plot1_brush”: <code>brush=&quot;plot1_brush&quot;</code>. Change <code>DT::renderDataTable()</code> to use output from <code>brushedPoints()</code> instead of using <code>data</code> directly.</p>
 <p><strong>Answer</strong>: exercises/exercise2/answer2c.R</p>
 </div>
 <div id="challenge-exercise-2d" class="section level2">
@@ -222,12 +222,12 @@ $(document).ready(function () {
 <h2>Exercise 2E</h2>
 <p>Working from exercises/exercise2/app.R or answer2c.R:</p>
 <ul>
-<li>Add a horizontal rule <code>hr()</code> above the DataTable.</li>
+<li>Add a horizontal rule <code>hr()</code> between the <code>mainPanel</code> and <code>verticalLayout</code>.</li>
 <li>Add a link to the source of the data:
 <ul>
 <li>African Development Bank Statistical Data Portal</li>
 <li><a href="http://dataportal.opendataforafrica.org" class="uri">http://dataportal.opendataforafrica.org</a></li>
-<li>Hint: There’s a caption tag (<code>tags$caption</code>). You’ll also need an <code>a</code> tag for a link.</li>
+<li>Hint: There’s a caption tag (<code>tags$caption()</code>). You’ll also need an <code>a()</code> tag for a link.</li>
 </ul></li>
 </ul>
 <p><strong>Answer</strong>: exercises/exercise2/answer2e.R</p>
@@ -237,11 +237,15 @@ $(document).ready(function () {
 <p>Working from exercises/exercise2/exercise2f.R:</p>
 <ul>
 <li>Put a <code>tabsetPanel</code> inside the <code>mainPanel</code> with 2 tabs:</li>
-<li>“All” tab: Existing plot</li>
-<li>“By Region” tab: New plot with ID “regionplot” (there’s code already in server section to actually make the plot)</li>
+<li>“All” <code>tabPanel</code>: Existing <code>plotOutput()</code></li>
+<li>“By Region” <code>tabPanel</code>: New <code>plotOutput()</code> with <code>outputId=&quot;regionplot&quot;</code> (there’s code already in the server section to actually make the plot <code>output$regionplot</code>)</li>
 </ul>
 <p>Refer to documentation as needed.</p>
 <p><strong>Answer</strong>: exercises/exercise2/answer2f.R</p>
+</div>
+<div id="exercise-2g" class="section level2">
+<h2>Exercise 2G</h2>
+<p>Apply a theme from <code>shinythemes</code> to any working app. Or use <code>shinythemes::themeSelector()</code> to see the themes applied to the app in real time.</p>
 </div>
 
 
