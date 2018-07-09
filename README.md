@@ -46,7 +46,9 @@ Alternatively, if you're familiar with git, you can create a new RStudio project
 
 ## Option 2: RStudio Cloud
 
-[RStudio Cloud](https://rstudio.cloud) is a way to run RStudio in your web browser.  Set up an account.  In Your Workspace, create a New Project, selecting New Project from a Git Repository.  Provide the address of this repository: https://github.com/nuitrcs/rshiny.  This will copy all of the files from this repository into your new project.  
+[RStudio Cloud](https://rstudio.cloud) is a way to run RStudio in your web browser.  Set up an account.  In Your Workspace, create a new project: Click on the down arrow next to New Project in the blue button, then select New Project from a Git Repository.  Provide the address of this repository: https://github.com/nuitrcs/rshiny.  This will copy all of the files from this repository into your new project.  
+
+![rstudio cloud new project](images/rstudiocloud.png)
 
 *You should wait until 2-3 days before the workshop to do this, to ensure you have the most current version of the workshop files.**
 
