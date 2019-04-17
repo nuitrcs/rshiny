@@ -49,7 +49,7 @@ server <- function(input, output) {
       theme_minimal()
   })
   
-  # code for exercise 2B goes here
+  # code for exercise 2B goes here.  You can do it with a single line of code or a code block
 }
 
 shinyApp()

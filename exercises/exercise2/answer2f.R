@@ -2,13 +2,12 @@
 library(shiny)
 library(readr)
 library(ggplot2)
+library(shinythemes)
 
 data <- read_csv("africadata.csv")
-africamap <- 
 
 ui <- fluidPage(
-  shinythemes::themeSelector(),
-  theme = shinytheme("cerulean"),
+  theme = shinythemes::shinytheme("cerulean"),  # We'll learn about this :)
   titlePanel("Africa: Country Size"),
   
   sidebarLayout(

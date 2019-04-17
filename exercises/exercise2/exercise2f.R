@@ -5,9 +5,9 @@ library(ggplot2)
 library(shinythemes)
 
 data <- read_csv("africadata.csv")
-africamap <- 
 
 ui <- fluidPage(
+  theme = shinythemes::shinytheme("cerulean"),  # We'll learn about this :)
   titlePanel("Africa: Country Size"),
   
   sidebarLayout(
@@ -19,7 +19,7 @@ ui <- fluidPage(
                   selected = "gdp_2017")
     ),
     mainPanel(
-      plotOutput("plot1"),
+      plotOutput("plot1"),  # replace this line with the tabsetPanel
       tags$caption("Data Source: ", a("African Development Bank Statistical Data Portal",
                                         href="http://dataportal.opendataforafrica.org"))
     )
