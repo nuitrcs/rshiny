@@ -7,6 +7,7 @@ data <- read_csv("africadata.csv")
 africamap <- 
 
 ui <- fluidPage(
+  shinythemes::themeSelector(),
   theme = shinytheme("cerulean"),
   titlePanel("Africa: Country Size"),
   
