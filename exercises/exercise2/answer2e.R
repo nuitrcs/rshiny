@@ -3,7 +3,7 @@ library(shiny)
 library(readr)
 library(ggplot2)
 
-data <- read_csv("africadata.csv")
+africadata <- read_csv("africadata.csv")
 
 ui <- fluidPage(
   
@@ -34,7 +34,7 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot({ 
     # use aes_string below, instead of aes, because input$y is text
-    ggplot(data, aes_string(x="area", y=input$yval)) + 
+    ggplot(africadata, aes_string(x="area", y=input$yval)) + 
       geom_point() + 
       geom_smooth(color="red", method="lm") +
       xlab("Area (sq km)") + 
@@ -43,10 +43,10 @@ server <- function(input, output) {
   
   output$datatable1 <- DT::renderDataTable({
     if(is.null(input$plot1_brush)) {
-      data
+      africadata
     } else {
       req(input$plot1_brush)
-      pts <- brushedPoints(data, input$plot1_brush, xvar="area", yvar=input$yval) 
+      pts <- brushedPoints(africadata, input$plot1_brush, xvar="area", yvar=input$yval) 
       pts <- subset(pts, !is.na(pts[input$yval])) # there are other ways to do this
       req(nrow(pts) > 0)
       pts

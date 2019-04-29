@@ -4,7 +4,7 @@ library(readr)
 library(ggplot2)
 library(shinythemes)
 
-data <- read_csv("africadata.csv")
+africadata <- read_csv("africadata.csv")
 
 ui <- fluidPage(
   theme = shinythemes::shinytheme("cerulean"),  # We'll learn about this :)
@@ -33,7 +33,7 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot({ 
     # use aes_string below, instead of aes, because input$y is text
-    ggplot(data, aes_string(x="area", y=input$yval)) + 
+    ggplot(africadata, aes_string(x="area", y=input$yval)) + 
       geom_point() + 
       geom_smooth(color="red", method="lm") +
       xlab("Area (sq km)") + 
@@ -41,7 +41,7 @@ server <- function(input, output) {
   })
   
   output$regionplot <- renderPlot({
-    ggplot(data, aes_string(x="area", y=input$yval)) + 
+    ggplot(africadata, aes_string(x="area", y=input$yval)) + 
       geom_point() + 
       geom_smooth(color="red", method="lm") +
       xlab("Area (sq km)") + 

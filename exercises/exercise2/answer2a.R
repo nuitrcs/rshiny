@@ -6,7 +6,7 @@ library(shiny)
 library(readr)
 library(ggplot2)
 
-data <- read_csv("africadata.csv")
+africadata <- read_csv("africadata.csv")
 
 ui <- fluidPage(
   
@@ -35,7 +35,7 @@ server <- function(input, output) {
   
   output$plot1 <- renderPlot({ # Error 2: output$plot didn't match outputId from above; instead of changing plot > plot1 here, you could have changed the outputId above
     # use aes_string below, instead of aes, because input$y is text
-    ggplot(data, aes_string(x="area", y=input$yval)) + # Error 3: input$y here didn't match inputID from above; alternatively, change inputId to "y" above instead
+    ggplot(africadata, aes_string(x="area", y=input$yval)) + # Error 3: input$y here didn't match inputID from above; alternatively, change inputId to "y" above instead
       geom_point() + 
       geom_smooth(color="red", method="lm") +
       xlab("Area (sq km)") + 

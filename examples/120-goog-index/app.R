@@ -8,8 +8,7 @@ trend_data <- read_csv("data/trend_data.csv")
 trend_description <- read_csv("data/trend_description.csv")
 
 # Define UI
-ui <- fluidPage(theme = shinytheme("lumen"),
-                titlePanel("Google Trend Index"),
+ui <- fluidPage(titlePanel("Google Trend Index"),
                 sidebarLayout(
                   sidebarPanel(
                     

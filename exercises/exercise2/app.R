@@ -1,19 +1,20 @@
 # EXERCISE 2A
 # Fix the code below so that the app runs and works
-# Hint: there are 4 errors
+# Hint: there are 3 errors
 
 # EXERCISE 2B
 # Fill in the code to render a DataTable of the entire data set.
+# Hints: 
 # What is the name of the element on output you need to set? output$_____ 
 # Using the cheat sheet, what is the render function for a DataTable that goes with dataTableOutput?
-# The only expression you need for the render function is the name of the data object.   
-# Hint: what did we call the dataset (data frame object) when importing it at the top of the file?
+# The only expr you need for the render function is the name of the data frame.   To find this, look at the top of the file for the line where the csv is imported.
 
 library(shiny)
 library(readr)
 library(ggplot2)
 
-data <- read_csv("africadata.csv")
+# import the data and name the data frame; africadata is used in the server function below
+africadata <- read_csv("africadata.csv")
 
 ui <- fluidPage(
   
@@ -42,7 +43,7 @@ server <- function(input, output) {
   
   output$plot <- renderPlot({
     # use aes_string below, instead of aes, because input$y is text
-    ggplot(data, aes_string(x="area", y=input$y)) + 
+    ggplot(africadata, aes_string(x="area", y=input$y)) + 
       geom_point() + 
       geom_smooth(color="red", method="lm") +
       xlab("Area (sq km)") + 
@@ -52,5 +53,5 @@ server <- function(input, output) {
   # code for exercise 2B goes here.  You can do it with a single line of code or a code block
 }
 
-shinyApp()
+shinyApp(ui = ui, server = server)
 
